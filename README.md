@@ -64,6 +64,112 @@ Click any day to see hourly breakdown for that day with:
 - Precipitation probability
 - Wind speed
 
+## 🎥 Project Demo
+
+### Watch the Full Demo (YouTube)
+
+<div align="center">
+  <a href="https://www.youtube.com/watch?v=4Sn2UfWzSVQ" target="_blank">
+    <img src="https://img.youtube.com/vi/4Sn2UfWzSVQ/maxresdefault.jpg" alt="Weather App Demo" width="700" style="border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+  </a>
+  
+  **Click the image above to watch the full demo on YouTube** ▶️
+</div>
+
+### What's in the Video
+
+✅ Real-time weather search by city  
+✅ Current weather display with all details  
+✅ Beautiful 7-day forecast cards  
+✅ Interactive hourly weather breakdown  
+✅ Responsive design on all devices  
+✅ Weather icons and visual indicators  
+✅ UV Index with risk assessment  
+
+**Video Length:** Full walkthrough of all features  
+**[Watch on YouTube →](https://www.youtube.com/watch?v=4Sn2UfWzSVQ)**
+
+
+
+## ✨ Features
+
+### 🔍 **City Search**
+- Search weather by city name worldwide
+- Real-time geocoding using Open-Meteo API
+- Instant results with error handling
+- Works with any city globally
+
+### 🌡️ **Current Weather Display**
+- Real-time temperature in Celsius
+- Live weather conditions (sunny, cloudy, rainy, etc.)
+- Detailed weather metrics:
+  - **Feels Like Temperature** - Actual feel vs actual temp
+  - **Humidity** - Moisture level in air (%)
+  - **Wind Speed** - Current wind speed (km/h)
+  - **Pressure** - Atmospheric pressure (hPa)
+  - **Visibility** - How far you can see (km)
+  - **UV Index** - Sun intensity with color-coded risk level
+
+### 📅 **7-Day Forecast**
+- Daily high and low temperatures
+- Weather icons for quick visual reference
+- Weather condition descriptions
+- Click any day to see hourly details
+- All 7 days visible at once
+
+### ⏰ **Hourly Weather Breakdown**
+- 24-hour forecast for selected day
+- Hourly temperature
+- Weather conditions for each hour
+- Precipitation probability
+- Wind speed per hour
+- Smooth horizontal scrolling
+- Easy close button to return to daily view
+
+### 📱 **Responsive Design**
+- ✅ Desktop (1920px+)
+- ✅ Laptop (1024px - 1920px)
+- ✅ Tablet (768px - 1024px)
+- ✅ Mobile (320px - 768px)
+- Beautiful gradient backgrounds
+- Smooth animations and transitions
+- Touch-friendly interface
+
+### 🎨 **Beautiful UI**
+- Modern gradient purple theme
+- Smooth hover effects
+- Color-coded UV Index bar
+- Professional animations
+- Clean and intuitive layout
+- Dark backgrounds for contrast
+- Easy to read typography
+
+---
+
+## 🛠️ Technologies Used
+
+| Technology | Purpose |
+|-----------|---------|
+| **HTML5** | Semantic structure and markup |
+| **CSS3** | Grid, Flexbox, Animations, Gradients |
+| **JavaScript (ES6+)** | Logic, DOM manipulation, API calls |
+| **Open-Meteo API** | Free weather data (no API key required) |
+
+---
+
+## 📦 Quick Installation
+
+### Prerequisites
+- ✅ Modern web browser (Chrome, Firefox, Safari, Edge)
+- ✅ Internet connection (for API calls)
+- ✅ No server required!
+
+### Step-by-Step Setup
+
+**1. Clone the Repository**
+```bash
+git clone https://github.com/sobaniw/Weather-App.git
+cd Weather-App
 ## Installation
 
 1. Clone the repository:
