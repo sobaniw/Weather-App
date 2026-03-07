@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Web App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="weather-card">
+            <div class="search-box">
+                <input 
+                    type="text" 
+                    id="cityInput" 
+                    placeholder="Enter city name..." 
+                    class="search-input"
+                >
+                <button id="searchBtn" class="search-btn">Search</button>
+            </div>
+
+            <div id="errorMessage" class="error-message"></div>
+
+            <div id="weatherContainer" class="weather-container">
+                <div class="city-info">
+                    <h1 id="cityName">--</h1>
+                    <p id="dateTime">--</p>
+                </div>
+
+                <div class="main-weather">
+                    <div class="temperature-section">
+                        <span id="temperature" class="temperature">--°C</span>
+                        <span id="weatherIcon" class="weather-icon">🌤️</span>
+                    </div>
+                    <p id="description" class="description">--</p>
+                </div>
+
+                <div class="weather-details">
+                    <div class="detail-box">
+                        <span class="detail-label">Feels Like</span>
+                        <span id="feelsLike" class="detail-value">--°C</span>
+                    </div>
+                    <div class="detail-box">
+                        <span class="detail-label">Humidity</span>
+                        <span id="humidity" class="detail-value">--%</span>
+                    </div>
+                    <div class="detail-box">
+                        <span class="detail-label">Wind Speed</span>
+                        <span id="windSpeed" class="detail-value">-- km/h</span>
+                    </div>
+                    <div class="detail-box">
+                        <span class="detail-label">Pressure</span>
+                        <span id="pressure" class="detail-value">-- hPa</span>
+                    </div>
+                    <div class="detail-box">
+                        <span class="detail-label">Visibility</span>
+                        <span id="visibility" class="detail-value">-- km</span>
+                    </div>
+                </div>
+
+                <!-- UV Index Section -->
+                <div class="uv-index-section">
+                    <div class="uv-index-container">
+                        <div class="uv-info">
+                            <span class="uv-label">UV Index</span>
+                            <span id="uvIndex" class="uv-value">--</span>
+                        </div>
+                        <div class="uv-level-info">
+                            <span id="uvLevel" class="uv-level-text">--</span>
+                            <div id="uvBar" class="uv-bar">
+                                <div id="uvBarFill" class="uv-bar-fill"></div>
+                            </div>
+                            <p id="uvRecommendation" class="uv-recommendation">--</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 7-Day Forecast Section -->
+                <div class="forecast-section">
+                    <h2>7-Day Forecast</h2>
+                    <div class="forecast-container" id="forecastContainer">
+                        <!-- Forecast items will be inserted here -->
+                    </div>
+                </div>
+
+                <!-- Hourly Forecast Section (shown when day is clicked) -->
+                <div class="hourly-section" id="hourlySection" style="display: none;">
+                    <div class="hourly-header">
+                        <h2 id="hourlyTitle">Hourly Forecast</h2>
+                        <button id="closeHourly" class="close-hourly">✕</button>
+                    </div>
+                    <div class="hourly-container" id="hourlyContainer">
+                        <!-- Hourly items will be inserted here -->
+                    </div>
+                </div>
+            </div>
+
+            <div id="loadingSpinner" class="loading-spinner hidden">
+                <div class="spinner"></div>
+                <p>Loading weather data...</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
