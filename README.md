@@ -9,6 +9,11 @@ This app provides real-time weather data, a 7-day forecast, and an interactive h
 🔗 https://weather-app-sooty-nu-14.vercel.app/
 
 ---
+## 🎥 Project Demo
+
+Click the image below to watch the full demo on YouTube 👇
+
+[![Weather App Demo](https://img.youtube.com/vi/WCR6diTEnzw/maxresdefault.jpg)](https://youtu.be/WCR6diTEnzw)
 
 ## 🎥 Project Demo (YouTube)
 ▶️ https://youtu.be/WCR6diTEnzw
