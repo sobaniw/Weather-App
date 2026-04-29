@@ -6,12 +6,13 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 25%, #7e22ce 75%, #c026d3 100%);
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 20px;
+    overflow-x: hidden;
 }
 
 .container {
@@ -20,11 +21,13 @@ body {
 }
 
 .weather-card {
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(15, 23, 42, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.18);
     border-radius: 20px;
     padding: 30px;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
 }
 
 /* Search Box */
@@ -37,32 +40,42 @@ body {
 .search-input {
     flex: 1;
     padding: 12px 20px;
-    border: 2px solid #e0e0e0;
+    border: 1px solid rgba(255, 255, 255, 0.18);
     border-radius: 50px;
     font-size: 16px;
-    transition: border-color 0.3s;
+    transition: border-color 0.3s, background 0.3s;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    backdrop-filter: blur(10px);
+}
+
+.search-input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
 }
 
 .search-input:focus {
     outline: none;
-    border-color: #667eea;
+    border-color: rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.15);
 }
 
 .search-btn {
     padding: 12px 30px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: rgba(148, 51, 234, 0.6);
     color: white;
-    border: none;
+    border: 1px solid rgba(255, 255, 255, 0.18);
     border-radius: 50px;
     font-size: 16px;
     cursor: pointer;
     font-weight: 600;
-    transition: transform 0.2s, box-shadow 0.2s;
+    transition: transform 0.2s, box-shadow 0.2s, background 0.3s;
+    backdrop-filter: blur(10px);
 }
 
 .search-btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+    box-shadow: 0 10px 30px rgba(148, 51, 234, 0.4);
+    background: rgba(148, 51, 234, 0.8);
 }
 
 .search-btn:active {
@@ -71,14 +84,16 @@ body {
 
 /* Error Message */
 .error-message {
-    color: #e74c3c;
+    color: #ff6b9d;
     text-align: center;
     margin-bottom: 20px;
     padding: 15px;
-    background: #fadbd8;
+    background: rgba(255, 107, 157, 0.15);
+    border: 1px solid rgba(255, 107, 157, 0.3);
     border-radius: 10px;
     display: none;
     font-weight: 500;
+    backdrop-filter: blur(10px);
 }
 
 .error-message.show {
@@ -98,18 +113,19 @@ body {
 .city-info {
     text-align: center;
     margin-bottom: 30px;
-    border-bottom: 2px solid #f0f0f0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     padding-bottom: 20px;
 }
 
 .city-info h1 {
     font-size: 32px;
-    color: #333;
+    color: #ffffff;
     margin-bottom: 10px;
+    font-weight: 700;
 }
 
 #dateTime {
-    color: #999;
+    color: rgba(255, 255, 255, 0.7);
     font-size: 14px;
 }
 
@@ -130,7 +146,7 @@ body {
 .temperature {
     font-size: 64px;
     font-weight: bold;
-    color: #667eea;
+    color: #ffffff;
 }
 
 .weather-icon {
@@ -139,7 +155,7 @@ body {
 
 .description {
     font-size: 18px;
-    color: #666;
+    color: rgba(255, 255, 255, 0.8);
     text-transform: capitalize;
 }
 
@@ -152,29 +168,34 @@ body {
 }
 
 .detail-box {
-    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.18);
     padding: 20px;
     border-radius: 15px;
     text-align: center;
-    transition: transform 0.3s;
+    transition: transform 0.3s, background 0.3s, border-color 0.3s;
+    backdrop-filter: blur(10px);
 }
 
 .detail-box:hover {
     transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.3);
 }
 
 .detail-label {
     display: block;
-    color: #666;
+    color: rgba(255, 255, 255, 0.6);
     font-size: 12px;
     text-transform: uppercase;
     margin-bottom: 10px;
     font-weight: 600;
+    letter-spacing: 0.5px;
 }
 
 .detail-value {
     display: block;
-    color: #333;
+    color: #ffffff;
     font-size: 20px;
     font-weight: bold;
 }
@@ -183,9 +204,10 @@ body {
 .uv-index-section {
     margin-bottom: 40px;
     padding: 25px;
-    background: linear-gradient(135deg, #fff5e6 0%, #ffe6cc 100%);
+    background: rgba(255, 165, 0, 0.12);
+    border: 1px solid rgba(255, 165, 0, 0.3);
     border-radius: 15px;
-    border-left: 5px solid #ffa500;
+    backdrop-filter: blur(10px);
 }
 
 .uv-index-container {
@@ -205,7 +227,7 @@ body {
 .uv-label {
     font-size: 12px;
     text-transform: uppercase;
-    color: #ff6b35;
+    color: rgba(255, 165, 0, 0.9);
     font-weight: 700;
     margin-bottom: 10px;
     letter-spacing: 1px;
@@ -214,7 +236,7 @@ body {
 .uv-value {
     font-size: 48px;
     font-weight: bold;
-    color: #ff6b35;
+    color: #ffa500;
     line-height: 1;
 }
 
@@ -226,14 +248,14 @@ body {
     display: block;
     font-size: 18px;
     font-weight: 700;
-    color: #333;
+    color: rgba(255, 255, 255, 0.9);
     margin-bottom: 12px;
 }
 
 .uv-bar {
     width: 100%;
     height: 12px;
-    background: #e0e0e0;
+    background: rgba(255, 255, 255, 0.1);
     border-radius: 10px;
     overflow: hidden;
     margin-bottom: 12px;
@@ -249,7 +271,7 @@ body {
 
 .uv-recommendation {
     font-size: 13px;
-    color: #555;
+    color: rgba(255, 255, 255, 0.75);
     line-height: 1.6;
     margin: 0;
     font-weight: 500;
@@ -286,7 +308,7 @@ body {
 }
 
 .forecast-section h2 {
-    color: #333;
+    color: rgba(255, 255, 255, 0.9);
     margin-bottom: 20px;
     font-size: 20px;
 }
@@ -298,38 +320,43 @@ body {
 }
 
 .forecast-item {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: rgba(148, 51, 234, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.18);
     color: white;
     padding: 20px;
     border-radius: 15px;
     text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
     cursor: pointer;
-    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.2);
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.15);
+    backdrop-filter: blur(10px);
 }
 
 .forecast-item:hover {
     transform: translateY(-8px);
-    box-shadow: 0 15px 30px rgba(102, 126, 234, 0.4);
+    box-shadow: 0 15px 40px rgba(148, 51, 234, 0.35);
+    background: rgba(148, 51, 234, 0.35);
+    border-color: rgba(255, 255, 255, 0.3);
 }
 
 .forecast-item.active {
     transform: scale(1.05);
-    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.6);
-    border: 3px solid #ffd700;
+    box-shadow: 0 10px 40px rgba(148, 51, 234, 0.5);
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    background: rgba(148, 51, 234, 0.4);
 }
 
 .forecast-date {
     font-size: 12px;
     margin-bottom: 10px;
-    opacity: 0.9;
+    opacity: 0.95;
     font-weight: 600;
 }
 
 .forecast-date-full {
     font-size: 11px;
     margin-bottom: 8px;
-    opacity: 0.8;
+    opacity: 0.85;
 }
 
 .forecast-icon {
@@ -347,7 +374,7 @@ body {
 }
 
 .forecast-low {
-    color: #e0e0e0;
+    color: rgba(255, 255, 255, 0.7);
     font-size: 12px;
     margin-left: 5px;
 }
@@ -363,9 +390,11 @@ body {
 .hourly-section {
     margin-top: 40px;
     padding: 25px;
-    background: linear-gradient(135deg, #f5f7fa 0%, #e9ecef 100%);
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.18);
     border-radius: 15px;
     animation: slideDown 0.3s ease-out;
+    backdrop-filter: blur(10px);
 }
 
 @keyframes slideDown {
@@ -389,27 +418,28 @@ body {
 }
 
 .hourly-header h2 {
-    color: #333;
+    color: rgba(255, 255, 255, 0.9);
     font-size: 20px;
 }
 
 .close-hourly {
-    background: #e74c3c;
+    background: rgba(255, 107, 157, 0.6);
     color: white;
-    border: none;
+    border: 1px solid rgba(255, 255, 255, 0.18);
     border-radius: 50%;
     width: 35px;
     height: 35px;
     font-size: 20px;
     cursor: pointer;
-    transition: transform 0.2s, background 0.2s;
+    transition: transform 0.2s, background 0.3s;
     display: flex;
     align-items: center;
     justify-content: center;
+    backdrop-filter: blur(10px);
 }
 
 .close-hourly:hover {
-    background: #c0392b;
+    background: rgba(255, 107, 157, 0.9);
     transform: rotate(90deg);
 }
 
@@ -426,34 +456,38 @@ body {
 }
 
 .hourly-container::-webkit-scrollbar-track {
-    background: #ddd;
+    background: rgba(255, 255, 255, 0.1);
     border-radius: 10px;
 }
 
 .hourly-container::-webkit-scrollbar-thumb {
-    background: #667eea;
+    background: rgba(148, 51, 234, 0.6);
     border-radius: 10px;
 }
 
 .hourly-container::-webkit-scrollbar-thumb:hover {
-    background: #764ba2;
+    background: rgba(148, 51, 234, 0.9);
 }
 
 .hourly-item {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: rgba(148, 51, 234, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.18);
     color: white;
     padding: 20px 15px;
     border-radius: 15px;
     text-align: center;
     flex-shrink: 0;
     width: 110px;
-    transition: transform 0.3s, box-shadow 0.3s;
-    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.15);
+    backdrop-filter: blur(10px);
 }
 
 .hourly-item:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+    box-shadow: 0 10px 30px rgba(148, 51, 234, 0.3);
+    background: rgba(148, 51, 234, 0.35);
+    border-color: rgba(255, 255, 255, 0.3);
 }
 
 .hourly-time {
@@ -507,8 +541,8 @@ body {
 }
 
 .spinner {
-    border: 4px solid #f3f3f3;
-    border-top: 4px solid #667eea;
+    border: 4px solid rgba(255, 255, 255, 0.2);
+    border-top: 4px solid rgba(148, 51, 234, 0.8);
     border-radius: 50%;
     width: 40px;
     height: 40px;
@@ -522,7 +556,7 @@ body {
 }
 
 .loading-spinner p {
-    color: #666;
+    color: rgba(255, 255, 255, 0.7);
     font-size: 16px;
 }
 
@@ -646,7 +680,6 @@ body {
 
     .uv-index-section {
         padding: 15px;
-        border-left: 4px solid #ffa500;
     }
 
     .uv-value {
