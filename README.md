@@ -44,11 +44,7 @@ This app provides real-time weather data, a 7-day forecast, and an interactive h
 
 ---
 
-## 📸 Screenshots
 
-> Add your screenshots here (important for recruiters)
-
----
 
 ## 📦 Installation
 
